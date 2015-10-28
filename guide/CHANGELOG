@@ -1,3 +1,97 @@
+[40aeeb4 | Wed Oct 28 12:45:05 UTC 2015] Richard Fisher <richardfsr@gmail.com>
+
+  * Fix ttl for memcache, redis, moneta
+
+
+
+[5cc6e2f | Mon Apr 14 17:50:52 UTC 2014] Michael Fellinger <m.fellinger@gmail.com>
+
+  * fix the whywiki
+
+[f2ebd20 | Wed Jul 24 12:01:25 UTC 2013] Michael Fellinger <m.fellinger@gmail.com>
+
+  * add preconditions for localmemcache specs
+
+[d7ad6b1 | Tue Apr 16 15:38:43 UTC 2013] Michael Fellinger <m.fellinger@gmail.com>
+
+  * update .gems
+
+[868bbf5 | Wed Jul 24 08:12:09 UTC 2013] Yorick Peterse <yorickpeterse@gmail.com>
+
+  * Removed myself from the Travis notifications list.
+
+[bc40299 | Fri Apr 19 10:09:14 UTC 2013] Javier Donaire <jdonaire@gmail.com>
+
+  * Paginate preserves multi-value parameters
+
+[3ab6a41 | Tue Apr 16 15:36:31 UTC 2013] Michael Fellinger <m.fellinger@gmail.com>
+
+  * no dep on hpricot in wicore spec
+
+[4237737 | Thu Apr 04 17:09:57 UTC 2013] Anton Ovchinnikov <revolver112@gmail.com>
+
+  * Changed :rubygems to https://rubygems.org in Gemfiles
+
+[5eca071 | Fri Feb 08 19:18:00 UTC 2013] Yorick Peterse <yorickpeterse@gmail.com>
+
+  * Corrected the Ramaze version for new prototypes.
+
+    Signed-off-by: Yorick Peterse <yorickpeterse@gmail.com>
+
+[d3fdce8 | Tue Jan 29 21:45:07 UTC 2013] Yorick Peterse <yorickpeterse@gmail.com>
+
+  * Removed the LRUHash snippet.
+
+    The LRUHash class has been moved to Innate.
+    
+    Signed-off-by: Yorick Peterse <yorickpeterse@gmail.com>
+
+[f0910f0 | Sat Jan 26 22:49:48 UTC 2013] Jack Polgar <jack.polgar@gmail.com>
+
+  * Fixed typos in code comments.
+
+[7645983 | Fri Jan 25 23:37:27 UTC 2013] Michel Blanc <mb@mbnet.fr>
+
+  * Fixes typos in sessions.md
+
+    Fixes my own typos, introduced in previous commit.
+
+[b3ae41c | Fri Jan 25 23:30:04 UTC 2013] Michel Blanc <mb@mbnet.fr>
+
+  * Adds more documentation about flash and flashbox
+
+    Added documentation on how flash can be used in view or layouts,
+    explaining that any key can be used.
+    An example shows how to take advantage of that to use flash keys as css
+    selectors.
+    Finally, a small example of how flashbox is used in views is shown.
+    Hopefully, this fixes #64
+
+[a46272f | Wed Jan 23 06:34:15 UTC 2013] Daniel Mendler <mail@daniel-mendler.de>
+
+  * add Moneta cache store
+
+[1feb7d6 | Fri Jan 11 23:06:16 UTC 2013] E0 <shan.huang@me.com>
+
+  * Minor change in slim spec to request template with variable.
+
+    Request '/external_vars' to use the '@name' variable along with the 'external_vars.slim' file.
+    
+    Signed-off-by: Shan Huang <shan.huang@me.com>
+    Signed-off-by: Yorick Peterse <yorickpeterse@gmail.com>
+
+[e77f5f3 | Sat Jan 12 13:04:10 UTC 2013] Yorick Peterse <yorickpeterse@gmail.com>
+
+  * Ensure spec URLs start with a slash.
+
+    Signed-off-by: Yorick Peterse <yorickpeterse@gmail.com>
+
+[4d31c4b | Sat Dec 08 18:18:22 UTC 2012] Yorick Peterse <yorickpeterse@gmail.com>
+
+  * Release 2012.12.08
+
+    Signed-off-by: Yorick Peterse <yorickpeterse@gmail.com>
+
 [679c415 | Sat Dec 08 18:16:36 UTC 2012] Yorick Peterse <yorickpeterse@gmail.com>
 
   * Added a note about upgrading.
