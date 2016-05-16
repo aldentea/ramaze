@@ -1,3 +1,5 @@
 module Ramaze
-  VERSION = '2012.12.08'
+  VERSION = Gem::Specification.load(
+    File.expand_path('../../../ramaze.gemspec', __FILE__)
+  ).version.to_s
 end
