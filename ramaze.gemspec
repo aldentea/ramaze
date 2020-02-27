@@ -14,7 +14,6 @@ Gem::Specification.new do |s|
     %w[Gemfile Rakefile README.md ramaze.gemspec]
   ).sort
 
-  s.has_rdoc                  = 'yard'
   s.executables               = ['ramaze']
 
   s.add_dependency 'innate', '>= 2012.12'
@@ -43,6 +42,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'tagz'
   s.add_development_dependency 'tenjin'
   s.add_development_dependency 'yard'
+  s.add_development_dependency 'scanf'
 
   if RUBY_VERSION.to_f >= 1.9
     s.add_development_dependency 'lokar'
