@@ -1,19 +1,64 @@
 language: ruby
 script: 'rake bacon'
+
+before_install:
+  - if ["$TRAVIS_RUBY_VERSION" = "2.2.10" ]; then
+      gem install bundler -v '< 2.0';
+#    elif ["$TRAVIS_RUBY_VERSION" = "1.9.3" ]; then
+#      gem install bundler -v '< 2.0';
+    else
+      gem install bundler;
+    fi
+install:
+  - bundle update
+
+
 rvm:
-  - 1.9.2
+#  - 1.8.7
   - 1.9.3
-  - 2.0.0
-  - 2.1.0
-  - 2.2.0
-  - 2.3.0
-  - jruby
-  - rbx-2
+  - jruby-18mode
+  - jruby-19mode
+  - rbx-18mode
+  - rbx-19mode
+  - rbx-3
+  - jruby-9.2.9.0
+  - jruby-head
 
 notifications:
   email:
-    - m.fellinger@gmail.com
+#    - m.fellinger@gmail.com
+    - aldentea-dev@telepathy.aldentea.0g0.jp
 
 branches:
   only:
-    - master
+#    - master
+    - develop
+jobs:
+  include:
+    - rvm: ruby-head
+      env: RUBYOPT=-rrubygems rake bacon
+    - rvm: 2.7.0
+      env: RUBYOPT=-rrubygems rake bacon
+    - rvm: 2.6.5
+      env: RUBYOPT=-rubygems rake bacon
+    - rvm: 2.5.7
+      env: RUBYOPT=-rubygems rake bacon
+    - rvm: 2.4.9
+      env: RUBYOPT=-rubygems rake bacon
+    - rvm: 2.3.8
+      env: RUBYOPT=-rubygems rake bacon
+    - rvm: 2.2.10
+      env: RUBYOPT=-rubygems rake bacon
+  allow_failures:
+#    - rvm: 1.8.7
+    - rvm: 1.9.3
+    - rvm: jruby-18mode
+    - rvm: jruby-19mode
+    - rvm: rbx-18mode
+    - rvm: rbx-19mode
+    - rvm: rbx-3
+    - rvm: jruby-9.2.9.0
+    - rvm: jruby-head
+    - rvm: 2.2.10
+    - rvm: 2.3.8
+    - rvm: 2.4.9 
