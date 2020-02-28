@@ -61,17 +61,17 @@ describe Ramaze::View::Haml do
     got = get('/links')
     got.status.should == 200
     got['Content-Type'].should == 'text/html'
-    got.body.strip.should ==
+    got.body.strip.gsub(/^\s+/, '').should ==
 "<ul>
-  <li>
-    <a href='/index'>Index page</a>
-  </li>
-  <li>
-    <a href='/internal'>Internal template</a>
-  </li>
-  <li>
-    <a href='/external'>External template</a>
-  </li>
+<li>
+<a href='/index'>Index page</a>
+</li>
+<li>
+<a href='/internal'>Internal template</a>
+</li>
+<li>
+<a href='/external'>External template</a>
+</li>
 </ul>"
   end
 
@@ -79,14 +79,14 @@ describe Ramaze::View::Haml do
     got = get('/external')
     got.status.should == 200
     got['Content-Type'].should == 'text/html'
-    got.body.strip.should ==
+    got.body.strip.gsub(/^\s+/, '').should ==
 "<html>
-  <head>
-    <title>Haml Test</title>
-  </head>
-  <body>
-    <h1>Haml Template</h1>
-  </body>
+<head>
+<title>Haml Test</title>
+</head>
+<body>
+<h1>Haml Template</h1>
+</body>
 </html>"
   end
 
@@ -94,9 +94,9 @@ describe Ramaze::View::Haml do
     got = get('/sum/1/2')
     got.status.should == 200
     got['Content-Type'].should == 'text/html'
-    got.body.strip.should ==
+    got.body.strip.gsub(/^\s+/, '').should ==
 "<div>
-  3
+3
 </div>"
   end
 
